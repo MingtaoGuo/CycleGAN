@@ -10,6 +10,8 @@ The main method of this paper, please see the image below(from the paper). Inspi
 
 ![paper_method](https://github.com/MingtaoGuo/CycleGAN/raw/master/method/cycleGAN_method.jpg)
 
+In this code, i don't use the loss function of [LSGAN](http://openaccess.thecvf.com/content_ICCV_2017/papers/Mao_Least_Squares_Generative_ICCV_2017_paper.pdf), instead i use [WGAN](https://arxiv.org/abs/1701.07875) which has been proved that it can yield high quility results and faster convergence rate, the problem of mode collapse of GAN also be solved by WGAN. But WGAN has shotcoming that it must satisfy the 1-Lipschitz condition, [WGAN-GP](http://papers.nips.cc/paper/7159-improved-training-of-wasserstein-gans.pdf)
+
 How to use the code 
 ---------------------
 Firstly, you should install python and install some packages of python like tensorflow, numpy, scipy, pillow etc.
