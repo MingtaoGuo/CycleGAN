@@ -8,9 +8,14 @@ Please see the detail about the paper CycleGAN from here [Unpaired Image-to-Imag
 
 The main method of this paper, please see the image below(from the paper). Inspiration of "Cycle" is from language to language translation[Dual Learning for Machine Translation](http://papers.nips.cc/paper/6469-dual-learning-for-machine-translation.pdf). For example, French-to-English and English-to-French, they called it dual learning. In CycleGAN, datasets domain X and datasets domain Y translate each other, like this X-to-Y and Y-to-X.
 
-![paper_method](https://github.com/MingtaoGuo/CycleGAN/raw/master/method/cycleGAN_method.jpg)
+<div align=center><img src=https://github.com/MingtaoGuo/CycleGAN/raw/master/method/cycleGAN_method.jpg></div>
 
 In this code, we don't use the loss function of [LSGAN](http://openaccess.thecvf.com/content_ICCV_2017/papers/Mao_Least_Squares_Generative_ICCV_2017_paper.pdf), instead we use [WGAN](https://arxiv.org/abs/1701.07875) which has been proved that it can yield high quality results and faster convergence rate, the problem of mode collapse of GAN also be solved by WGAN. But WGAN has shotcoming that it must satisfy the 1-Lipschitz condition. [WGAN-GP](http://papers.nips.cc/paper/7159-improved-training-of-wasserstein-gans.pdf) solve the problem of WGAN about 1-Lipschitz condition by gradient penalty, but it has a problem that the computation of gradient penalty cost too much time in training phase. In this code, we don't use gradient penalty, instead we use [spectral Normalization](https://arxiv.org/abs/1802.05957) which is published in ICLR2018, it not only can yield high quality results like WGAN-GP, but also cost less time in training phase.
+
+Result from the paper
+----------------------
+
+<div align=center><img src=https://github.com/MingtaoGuo/CycleGAN/raw/master/result/resultOfPaper.jpg></div>
 
 How to use the code 
 ---------------------
