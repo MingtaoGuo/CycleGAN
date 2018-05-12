@@ -10,7 +10,7 @@ The main method of this paper, please see the image below(from the paper). Inspi
 
 ![paper_method](https://github.com/MingtaoGuo/CycleGAN/raw/master/method/cycleGAN_method.jpg)
 
-In this code, i don't use the loss function of [LSGAN](http://openaccess.thecvf.com/content_ICCV_2017/papers/Mao_Least_Squares_Generative_ICCV_2017_paper.pdf), instead i use [WGAN](https://arxiv.org/abs/1701.07875) which has been proved that it can yield high quility results and faster convergence rate, the problem of mode collapse of GAN also be solved by WGAN. But WGAN has shotcoming that it must satisfy the 1-Lipschitz condition, [WGAN-GP](http://papers.nips.cc/paper/7159-improved-training-of-wasserstein-gans.pdf)
+In this code, we don't use the loss function of [LSGAN](http://openaccess.thecvf.com/content_ICCV_2017/papers/Mao_Least_Squares_Generative_ICCV_2017_paper.pdf), instead we use [WGAN](https://arxiv.org/abs/1701.07875) which has been proved that it can yield high quility results and faster convergence rate, the problem of mode collapse of GAN also be solved by WGAN. But WGAN has shotcoming that it must satisfy the 1-Lipschitz condition. [WGAN-GP](http://papers.nips.cc/paper/7159-improved-training-of-wasserstein-gans.pdf) solve the problem of WGAN about 1-Lipschitz condition by gradient penalty, but it has a problem that the computation of gradient penalty cost too much time in training phase. In this code, we don't use gradient penalty, instead we use [spectral Normalization](https://arxiv.org/abs/1802.05957) which is published in ICLR2018, it not only can yield high quility results like WGAN-GP, but also cost less time in training phase.
 
 How to use the code 
 ---------------------
@@ -24,7 +24,7 @@ Please use these commands to install:
 
 Secondly, putting two domains of datasets into the folder X and Y. For example, put the datasets about man into X, and put the datasets about woman into Y. I will provide one datasets about man2woman, which is selected from [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html). There are about 8000 images for man, and 10000 images for woman and the images i had croped and resized it to 256x256. Please download the datasets from here [BaiDuYun](https://pan.baidu.com/s/1PNBklyMbn7wESkW5UIbMVw)
 
-The result of this code 
+Results of this code 
 ------------------------
 
 
