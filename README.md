@@ -32,7 +32,7 @@ Secondly, putting two domains of datasets into the folder X and Y. For example, 
 Results of this code 
 ------------------------
 
-
+Is training.....
 
 
 
