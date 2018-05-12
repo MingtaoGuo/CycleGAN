@@ -142,7 +142,7 @@ class CycleGAN:
         self.logits_fake_Y = self.Dy(self.fake_Y, True)
         self.L_cyc = tf.reduce_mean(tf.abs(F(self.fake_Y, True) - self.X)) + tf.reduce_mean(tf.abs(G(self.fake_X, True) - self.Y))
         #WGAN's Loss function is used here, which is different from the paper CycleGAN where used LSGAN's loss function
-        #WGAN has been proved that it can yield high qulity result and make the training process more stable
+        #WGAN has been proved that it can yield high quality result and make the training process more stable
         self.d_loss_Y = -tf.reduce_mean(self.logits_real_Y) + tf.reduce_mean(self.logits_fake_Y)
         self.d_loss_X = -tf.reduce_mean(self.logits_real_X) + tf.reduce_mean(self.logits_fake_X)
         self.g_loss_Y = -tf.reduce_mean(self.logits_fake_Y) + 10. * self.L_cyc
