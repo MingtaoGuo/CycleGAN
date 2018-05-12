@@ -8,7 +8,7 @@ Please see the detail about the paper CycleGAN from here [Unpaired Image-to-Imag
 
 The main method of this paper, please see the image below(from the paper). Inspiration of "Cycle" is from language to language translation[Dual Learning for Machine Translation](http://papers.nips.cc/paper/6469-dual-learning-for-machine-translation.pdf). For example, French-to-English and English-to-French, they called it dual learning. In CycleGAN, datasets domain X and datasets domain Y translate each other, like this X-to-Y and Y-to-X.
 
-![paper_method](https://github.com/MingtaoGuo/CycleGAN/raw/master/method/cycleGAN_method.jpg])
+![paper_method](https://github.com/MingtaoGuo/CycleGAN/raw/master/method/cycleGAN_method.jpg)
 
 How to use the code 
 ---------------------
