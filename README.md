@@ -34,7 +34,7 @@ Results of this code
 
 Because of my poor device, i just train the CycleGAN for 13 epochs, the result of man2woman as shown below, the result of woman2man looks not really well, so i don't show it.
 
-[resultofmine](https://github.com/MingtaoGuo/CycleGAN/raw/master/result/resultofmine.jpg)
+<div align=center><img src=https://github.com/MingtaoGuo/CycleGAN/raw/master/result/resultofmine.jpg></div>
 
 
 
