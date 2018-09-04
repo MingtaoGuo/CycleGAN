@@ -33,8 +33,8 @@ def deconv(inputs, nums_out, ksize, stride):
 
 def InstanceNorm(inputs):
     mean, var = tf.nn.moments(inputs, axes=[1, 2], keep_dims=True)
-    scale = tf.get_variable("scale", shape=mean.shape, initializer=tf.constant_initializer([1.]))
-    shift = tf.get_variable("shift", shape=mean.shape, initializer=tf.constant_initializer([0.]))
+    scale = tf.get_variable("scale", shape=mean.shape[-1], initializer=tf.constant_initializer([1.]))
+    shift = tf.get_variable("shift", shape=mean.shape[-1], initializer=tf.constant_initializer([0.]))
     return (inputs - mean) * scale / tf.sqrt(var + epsilon) + shift
 
 def leaky_relu(inputs, slope=0.2):
